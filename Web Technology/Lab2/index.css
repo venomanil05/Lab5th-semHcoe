@@ -1,0 +1,141 @@
+:root {
+    --clr-neutral-900:hsl(0, 0%, 7%);
+    --clr-neutral-800:hsl(0, 0%, 15%);
+    --clr-neutral-500:hsl(240, 3%, 46%);
+    --clr-neutral-400:hsl(240, 1%, 59%);
+     --clr-neutral-0:hsl(0, 0%, 100%);
+     --clr-blue-600:hsl(214, 100%, 55%);
+     --clr-blue-400:hsl(210, 100%, 65%);
+     --clr--red-500:hsl(354, 63%, 57%);
+    --clr--Green-500:hsl(140, 63%, 57%);
+    --clr--Yellow-500:hsl(49, 85%, 70%);
+
+    --font-main:"sora", sans serif;
+    --font-size:16px;
+} 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: "border-box";
+}
+
+html{
+    font-size: var(--font-size);
+}
+
+body{
+    font-family: var(--font-main);
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-neutral-900);
+}
+.container{
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+header{
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+     color: var(--clr-neutral-400);
+     margin-left: 5px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timing, .difficulties{
+    display: flex;
+
+}
+.timing .option{
+    padding-right: 15px;
+    border-right: 1px solid var(--clr-neutral-500);
+}
+.option .timing{
+   border-right: none;
+}
+.timing .value{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.tags .tag{
+    border: 1px solid var(--clr-neutral-400);
+    border-radius: 8px;
+    padding: 3px 8px;
+}
+
+.tag-active{
+    border-color: var(--clr-blue-400);
+    color: var(--clr-blue-400);
+}
+
+.typebox {
+    padding: 20px 0px;
+    position: relative;
+}
+
+.typebox .texts {
+    font-size: 1.5em;
+    line-height: 2;
+    color: var(--clr--Yellow-500);
+}
+
+ .blurred{
+    filter: blur(12px);
+ }
+
+ .hidden{
+    display: none !important;
+ }
+
+ .current{
+   background-color: var(--clr-neutral-800);
+  border-left: 1px solid var(--clr-blue-600);
+ }
+
+ .correct{
+    color: var(--clr--Green-500);
+ }
+
+ .incorrect{
+    color: var(--clr--red-500);
+    border-bottom: 1px solid var(--clr--red-500); 
+}
+
+#hidden-input {
+    width: 0;
+    height: 0;
+    border: none;
+}
+
+.starter{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.starter p{
+    text-align: center;
+}
+.starter button{
+   padding: 10px 15px;
+   background-color: var(--clr-blue-600);
+   border-radius: 10px;
+   color: var(--clr-neutral-0);
+   font-size: 1.1rem;
+   border: none;
+}
+button:hover{
+    cursor: pointer;
+}
+
